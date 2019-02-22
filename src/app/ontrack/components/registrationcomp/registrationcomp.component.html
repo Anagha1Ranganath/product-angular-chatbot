@@ -1,0 +1,129 @@
+<!-- <div class="box">
+  
+<h1>REGISTRATION FORM</h1>
+
+<br>
+<form [formGroup]="user" (ngSubmit)="login()">
+  <mat-form-field appearance="outline" class="id">
+    <mat-label>User login</mat-label>
+    <input matInput placeholder="Enter your email id" type="text"
+      formControlName="userId" required />
+    <mat-hint></mat-hint>
+  </mat-form-field>
+  </form>
+<br>
+<br>
+<form [formGroup]="user" (ngSubmit)="login()">
+  <mat-form-field appearance="outline" class="id">
+    <mat-label>User login</mat-label>
+    <input matInput placeholder="Mobile No." type="text"
+      formControlName="Mobile" required />
+    <mat-hint></mat-hint>
+  </mat-form-field>
+  </form>
+<br>
+<br>
+<form [formGroup]="user" (ngSubmit)="login()">
+  <mat-form-field appearance="outline" class="id">
+    <mat-label>User login</mat-label>
+    <input matInput placeholder="User Name" type="text"
+      formControlName="Name" required />
+     <mat-hint></mat-hint>
+  </mat-form-field>
+  </form>
+<br>
+<br>
+<form [formGroup]="user" (ngSubmit)="login()">
+  <mat-form-field appearance="outline" class="id">
+    <mat-label>User login</mat-label>
+    <input matInput placeholder="password" type="text"
+      formControlName="password" required />
+    <mat-hint></mat-hint>
+  </mat-form-field>
+  </form>
+<br>
+<br>
+<form [formGroup]="user" (ngSubmit)="login()">
+  <mat-form-field appearance="outline" class="id">
+    <mat-label>User login</mat-label>
+    <input matInput placeholder="Date of Birth" type="text"
+      formControlName="DOB" required />
+    <mat-hint></mat-hint>
+  </mat-form-field>
+<br>
+<button mat-button color="primary" type="submit" [disabled]="!user.valid">Submit</button>
+</form>
+</div> -->
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Registration Form</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="example-form">
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+            <input matInput placeholder="name" [(ngModel)]="name" name="name" required>
+            </mat-form-field>
+          </td>
+        </tr>
+ 
+ 
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+            <input matInput placeholder="User Id" [(ngModel)]="userId" name="userId" required>
+            </mat-form-field>
+          </td>
+        </tr>
+ 
+        <tr>
+        <td><mat-form-field class="example-full-width">
+          <input matInput placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
+          <i class="material-icons">
+            visibility
+            </i>
+        </mat-form-field></td>
+        </tr>
+       
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+            <input matInput placeholder="mobileNo" [(ngModel)]="mobileNo" name="mobileNo" required>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+            <input matInput placeholder="Date Of Birth" [(ngModel)]="dateofBirth" name="dob" required>
+            </mat-form-field>
+          </td>
+        </tr>
+ 
+ <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+            <input matInput placeholder="Gender" [(ngModel)]="gender" name="gender" required>
+            <mat-radio-group appearance="outline">
+              <mat-radio-button value="1">Male</mat-radio-button>
+              <mat-radio-button value="2">Female</mat-radio-button>
+            </mat-radio-group>
+            </mat-form-field>
+          </td>
+        </tr>
+ 
+        </table>
+    </form>
+    <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+
+    <div  class="chatform">
+  <message-list [messages]="messages"></message-list>
+  <message-form [message]="message" [messages]="messages"></message-form>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="register($event)" color="primary">Register</button>
+  </mat-card-actions>  </mat-card>

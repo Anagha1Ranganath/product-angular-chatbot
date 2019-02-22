@@ -1,0 +1,19 @@
+{
+    "products": [
+      {
+        "product_name": "Nike",
+        "quantity": 2,
+        "price": 8000
+      },
+      {
+        "product_name": "Puma",
+        "quantity": 1,
+        "price": 3500
+      },
+      {
+        "product_name": "Addidas",
+        "quantity": 3,
+        "price": 30000
+      }
+    ]
+  }

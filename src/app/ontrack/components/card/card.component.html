@@ -1,0 +1,129 @@
+
+<div class = "row">
+<input type="text" #myInput [(ngModel)]="productName" (input)= "search()" placeholder="search by brand"/>
+</div>
+<table class="table">
+  <!-- <tr>
+    <th>productId</th>
+    <th>productName</th>
+  </tr> -->
+  <tr *ngFor='let o of products'>
+    <td>{{o.productId}}</td>
+    <td>{{o.productName}}</td>
+<div class="row">
+    <mat-card class='product--blue'>
+      <mat-card-header>
+        
+      <div class='product_inner'>
+        <img src='http://wellandgood.com/wp-content/uploads/2012/07/Nike-Free-30-Womens-Running-Shoe-511495_600_A.png' width='300'>
+        <p>Nike Air (Women)</p>
+        
+        <p>Size 7</p>
+        <p>Price £199.99</p>
+      </div>
+      </mat-card-header>
+     <mat-card-actions align="center">
+        <button mat-raised-button (click)="buy()">Buy</button>
+       <button mat-raised-button (click)="openDialog()">Details</button>
+       <mat-card-actions align="center">
+          <button mat-raised-button (click)="AddToCart()">AddToCart</button>
+      </mat-card-actions>
+     </mat-card-actions>
+   </mat-card>
+  
+    <mat-card class='product--orange'>
+      <mat-card-header>
+      <div class='product_inner'>
+        <img src='http://wellandgood.com/wp-content/uploads/2012/07/Nike-Free-30-Womens-Running-Shoe-511495_600_A.png' width='300'>
+        <p>Nike Air (Men)</p>
+        <p>Size 10</p>
+        <p>Price £99.99</p>
+      </div>
+    </mat-card-header>
+    <mat-card-actions align="center">
+        <button mat-raised-button (click)="buy()">Buy</button>
+        <button mat-raised-button (click)="openDialog()">Details</button>
+        <mat-card-actions align="center">
+            <button mat-raised-button (click)="AddToCart()" >AddToCart</button>
+        </mat-card-actions>
+    </mat-card-actions>
+    </mat-card>
+
+    <mat-card class='product--yellow'>
+      <mat-card-header>
+      <div class='product_inner'>
+        <img src='http://wellandgood.com/wp-content/uploads/2012/07/Nike-Free-30-Womens-Running-Shoe-511495_600_A.png' width='300'>
+        <p>Nike Air (Women)</p>
+        <p>Size 11</p>
+        <p>Price £299.99</p>
+      </div>
+    </mat-card-header>
+      <mat-card-actions align="center">
+          <button mat-raised-button (click)="buy()">Buy</button>
+          <button mat-raised-button (click)="openDialog()">Details</button>
+          <mat-card-actions>
+              <button mat-raised-button (click)="AddToCart()" >AddToCart</button>
+          </mat-card-actions>
+        </mat-card-actions>
+      </mat-card>
+
+    <mat-card class='product--red'>
+      <mat-card-header align="center">
+      <div class='product_inner'>
+        <img src='http://wellandgood.com/wp-content/uploads/2012/07/Nike-Free-30-Womens-Running-Shoe-511495_600_A.png' width='300'>
+        <p>Nike Air (Women)</p>
+        <p>Size 8</p>
+        <p>Price £399.99</p>
+      </div>
+    </mat-card-header>
+    <mat-card-actions align="center">
+        <button mat-raised-button (click)="buy()">Buy</button>
+        <button mat-raised-button (click)="openDialog()">Details</button>
+        <mat-card-actions align="center">
+            <button mat-raised-button (click)="AddToCart()" >AddToCart</button>
+        </mat-card-actions>
+      </mat-card-actions>
+    </mat-card>
+    
+    <mat-card class='product--green'>
+      <mat-card-header>
+      <div class='product_inner'>
+        <img src='http://wellandgood.com/wp-content/uploads/2012/07/Nike-Free-30-Womens-Running-Shoe-511495_600_A.png' width='300'>
+        <p>Nike Air (Men)</p>
+        <p>Size 11</p>
+        <p>Price £299.99</p>
+      </div>
+    </mat-card-header>
+    <mat-card-actions align="center">
+        <button mat-raised-button (click)="buy()">Buy</button>
+        <button mat-raised-button (click)="openDialog()">Details</button>
+        <mat-card-actions align="center">
+            <button mat-raised-button (click)="AddToCart()" >AddToCart</button>
+        </mat-card-actions>
+    </mat-card-actions>
+    </mat-card>  
+  
+    <!-- <mat-card class='product--pink'>
+        <mat-card-header>
+        <div class='product_inner'>
+          <img src='../assets/img/3.jpg' width='300px'>
+          <p>BAKLEY Men Synthetic Running Shoes</p>
+          <p>Size 11</p>
+          <p>Price £299.99</p>
+        </div>
+      </mat-card-header>
+        <mat-card-actions align="center">
+            <button mat-raised-button (click)="buy()">Buy</button>
+            <button mat-raised-button (click)="openDialog()">Details</button>
+            <mat-card-actions align="center">
+                <button mat-raised-button (click)="AddToCart()" >AddToCart</button>
+            </mat-card-actions>
+        </mat-card-actions>
+        </mat-card> -->
+
+      </div>
+    </tr>
+  </table>
+<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</body>
